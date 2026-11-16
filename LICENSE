@@ -1,0 +1,53 @@
+Copyright (c) 2026 Sourya Dasgupta. All rights reserved.
+
+PROPRIETARY AND CONFIDENTIAL - VIEW-ONLY LICENSE
+
+This repository, including all RTL source code, testbenches, scripts, IP
+packaging files, reports, diagrams, images, videos and documentation (the
+"Work"), is the proprietary property of Sourya Dasgupta (the "Owner").
+
+1. Permission to view.
+   You may view the Work in your web browser on GitHub for the sole purpose
+   of evaluating it. No other right or license is granted, whether expressly,
+   by implication, by estoppel or otherwise.
+
+2. Restrictions.
+   Without the Owner's prior written permission you may NOT, in whole or in
+   part:
+   a) copy, download for reuse, reproduce, or store the Work, except for the
+      temporary copies your browser makes while viewing it;
+   b) modify, adapt, translate, or create derivative works of the Work;
+   c) use the Work, or any design, architecture or technique taken from it,
+      in any product, project, FPGA or ASIC design, bitstream or netlist,
+      whether commercial or non-commercial;
+   d) synthesize, implement, simulate for production purposes, or program
+      any device with the Work;
+   e) distribute, publish, sublicense, sell, lease or otherwise make the
+      Work available to any third party;
+   f) use the Work to train, fine-tune or evaluate machine-learning or
+      artificial-intelligence systems; or
+   g) remove or alter this notice or any copyright notice in the Work.
+
+3. GitHub Terms of Service.
+   The Work is published on GitHub. As required by the GitHub Terms of
+   Service, other GitHub users may view and fork this repository within
+   GitHub. A fork does not grant any additional rights: all restrictions in
+   Section 2 apply to forks and to any copy of the Work.
+
+4. Reservation of rights.
+   The Owner reserves all rights not expressly granted in Section 1,
+   including all copyright and any other intellectual-property rights in the
+   Work and in any future development based on it.
+
+5. No warranty.
+   THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL
+   THE OWNER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM
+   OR IN CONNECTION WITH THE WORK.
+
+6. Termination.
+   Any use of the Work outside Section 1 is unauthorized and automatically
+   terminates any permission granted here.
+
+Licensing enquiries: Sourya Dasgupta <souryadasgupta2001@gmail.com>

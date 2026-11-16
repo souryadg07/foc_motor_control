@@ -175,4 +175,6 @@ verification_evidence/ single-sample simulation evidence: annotated figure, Viva
 
 ## License
 
-No license file is included yet. Add one (for example MIT, Apache-2.0 or CERN-OHL) before you publish.
+**Proprietary, all rights reserved.** Copyright (c) 2026 Sourya Dasgupta.
+
+This repository is published for viewing only. You may read it on GitHub, but you may not copy, modify, synthesize, use in any design or product, redistribute, or use it to train AI systems without written permission. See [`LICENSE`](LICENSE) for the full terms. For licensing enquiries, contact souryadasgupta2001@gmail.com.
