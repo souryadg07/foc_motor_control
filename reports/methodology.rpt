@@ -1,0 +1,55 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Mon Nov 16 04:43:15 2026
+| Host         : <build-host> running 64-bit major release  (build 9200)
+| Command      : report_methodology -file reports/methodology.rpt
+| Design       : foc_top_timing_top
+| Device       : xczu7ev-ffvc1156-2-e
+| Speed File   : -2
+| Design State : Partially Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: foc_top_timing_top
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max checks: <unlimited>
+             Checks found: 4
++---------+----------+--------------------------------------------+--------+
+| Rule    | Severity | Description                                | Checks |
++---------+----------+--------------------------------------------+--------+
+| SYNTH-6 | Warning  | Timing of a RAM block might be sub-optimal | 4      |
++---------+----------+--------------------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+SYNTH-6#1 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance dut/u_foc_top/u_cpp/u_park/u_sincos_lut/sin_mag_reg_0, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#2 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance dut/u_foc_top/u_cpp/u_park/u_sincos_lut/sin_mag_reg_1, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#3 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance dut/u_foc_top/u_ipark/u_sincos_lut/sin_mag_reg_0, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+SYNTH-6#4 Warning
+Timing of a RAM block might be sub-optimal  
+The timing for the instance dut/u_foc_top/u_ipark/u_sincos_lut/sin_mag_reg_1, implemented as a RAM block, might be sub-optimal as no output register was merged into the block.
+Related violations: <none>
+
+

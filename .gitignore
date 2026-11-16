@@ -1,0 +1,19 @@
+# Build outputs (regenerate with scripts/*.tcl)
+build/
+
+# Vivado / xsim scratch
+.Xil/
+*.jou
+*.log
+*.str
+*.pb
+*.wdb
+xsim.dir/
+webtalk*
+vivado_pid*.zip
+
+# Python
+__pycache__/
+
+# Keep the simulation transcript that the README cites as evidence
+!verification_evidence/*.log

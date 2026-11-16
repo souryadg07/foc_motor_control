@@ -1,0 +1,43 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Mon Nov 16 04:40:03 2026
+| Host         : <build-host> running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -file reports/utilization_synth_hier.rpt
+| Design       : foc_top_timing_top
+| Device       : xczu7ev-ffvc1156-2-e
+| Speed File   : -2
+| Design State : Synthesized
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++------------------------+--------------------+------------+------------+---------+------+------+--------+--------+------+------------+
+|        Instance        |       Module       | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | URAM | DSP Blocks |
++------------------------+--------------------+------------+------------+---------+------+------+--------+--------+------+------------+
+| foc_top_timing_top     |              (top) |       1167 |       1125 |      28 |   14 | 1004 |      4 |      0 |    0 |         16 |
+|   (foc_top_timing_top) |              (top) |          0 |          0 |       0 |    0 |  239 |      0 |      0 |    0 |          0 |
+|   dut                  |  foc_motor_control |       1167 |       1125 |      28 |   14 |  765 |      4 |      0 |    0 |         16 |
+|     u_foc_top          |            foc_top |       1167 |       1125 |      28 |   14 |  765 |      4 |      0 |    0 |         16 |
+|       u_svpwm          |              svpwm |        362 |        362 |       0 |    0 |  257 |      0 |      0 |    0 |          2 |
+|       u_cpp            |     clarke_park_pi |        507 |        507 |       0 |    0 |  204 |      2 |      0 |    0 |         10 |
+|         u_park         |     park_transform |        129 |        129 |       0 |    0 |    7 |      2 |      0 |    0 |          4 |
+|           (u_park)     |     park_transform |         75 |         75 |       0 |    0 |    4 |      0 |      0 |    0 |          4 |
+|           u_sincos_lut |       sincos_lut_1 |         54 |         54 |       0 |    0 |    3 |      2 |      0 |    0 |          0 |
+|         u_pi_d         |      pi_controller |         86 |         86 |       0 |    0 |   59 |      0 |      0 |    0 |          2 |
+|         u_pi_q         |    pi_controller_0 |        272 |        272 |       0 |    0 |  103 |      0 |      0 |    0 |          2 |
+|       u_in_slice       |   axis_skid_buffer |         85 |         85 |       0 |    0 |  127 |      0 |      0 |    0 |          0 |
+|       u_ipark          | inv_park_transform |        123 |        123 |       0 |    0 |   76 |      2 |      0 |    0 |          4 |
+|         (u_ipark)      | inv_park_transform |         69 |         69 |       0 |    0 |   72 |      0 |      0 |    0 |          4 |
+|         u_sincos_lut   |         sincos_lut |         54 |         54 |       0 |    0 |    4 |      2 |      0 |    0 |          0 |
+|       u_out_fifo       |          axis_fifo |         73 |         45 |      28 |    0 |   65 |      0 |      0 |    0 |          0 |
++------------------------+--------------------+------------+------------+---------+------+------+--------+--------+------+------------+
+
+

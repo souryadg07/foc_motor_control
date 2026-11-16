@@ -1,0 +1,31 @@
+Time resolution is 1 ps
+STAGE s_axis    edge=8 t=76000  handshake (E)
+STAGE accept    edge=9 (E+1) t=86000  chain samples it (N)
+STAGE Clarke    edge=9 (N+0) t=86000  alpha=20000 beta=0
+STAGE Park      edge=13 (N+4) t=126000  d=14142 q=-14142
+STAGE PI        edge=17 (N+8) t=166000  v_d=-4242 v_q=7242
+STAGE InvPark   edge=21 (N+12) t=206000  v_alpha=-8120 v_beta=2121
+STAGE SVPWM     edge=26 (N+17) t=256000  duty_a=18751 duty_b=46785 duty_c=39437
+STAGE m_axis    edge=27 (E+19) t=266000  tvalid with duties 18751/46785/39437 (handshake at next edge)
+PASS: one beat abc=(20000,-10000,-10000) theta=45deg -> duties 18751/46785/39437
+$finish called at time : 340 ns : File "c:/Users/soury/Desktop/test/spike-opencode/foc_motor_control/tb/tb_foc_top_single.sv" Line 113
+STAGE s_axis    edge=8 t=76000  handshake (E)
+STAGE accept    edge=9 (E+1) t=86000  chain samples it (N)
+STAGE Clarke    edge=9 (N+0) t=86000  alpha=20000 beta=0
+STAGE Park      edge=13 (N+4) t=126000  d=14142 q=-14142
+STAGE PI        edge=17 (N+8) t=166000  v_d=-4242 v_q=7242
+STAGE InvPark   edge=21 (N+12) t=206000  v_alpha=-8120 v_beta=2121
+STAGE SVPWM     edge=26 (N+17) t=256000  duty_a=18751 duty_b=46785 duty_c=39437
+STAGE m_axis    edge=27 (E+19) t=266000  tvalid with duties 18751/46785/39437 (handshake at next edge)
+PASS: one beat abc=(20000,-10000,-10000) theta=45deg -> duties 18751/46785/39437
+$finish called at time : 340 ns : File "c:/Users/soury/Desktop/test/spike-opencode/foc_motor_control/tb/tb_foc_top_single.sv" Line 113
+STAGE s_axis    edge=8 t=76000  handshake (E)
+STAGE accept    edge=9 (E+1) t=86000  chain samples it (N)
+STAGE Clarke    edge=9 (N+0) t=86000  alpha=20000 beta=0
+STAGE Park      edge=13 (N+4) t=126000  d=14142 q=-14142
+STAGE PI        edge=17 (N+8) t=166000  v_d=-4242 v_q=7242
+STAGE InvPark   edge=21 (N+12) t=206000  v_alpha=-8120 v_beta=2121
+STAGE SVPWM     edge=26 (N+17) t=256000  duty_a=18751 duty_b=46785 duty_c=39437
+STAGE m_axis    edge=27 (E+19) t=266000  tvalid with duties 18751/46785/39437 (handshake at next edge)
+PASS: one beat abc=(20000,-10000,-10000) theta=45deg -> duties 18751/46785/39437
+$finish called at time : 340 ns : File "c:/Users/soury/Desktop/test/spike-opencode/foc_motor_control/tb/tb_foc_top_single.sv" Line 113
