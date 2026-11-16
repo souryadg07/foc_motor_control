@@ -17,3 +17,6 @@ __pycache__/
 
 # Keep the simulation transcript that the README cites as evidence
 !verification_evidence/*.log
+
+# Local design notes, not published
+upgrade_plan/
