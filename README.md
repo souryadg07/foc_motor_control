@@ -104,6 +104,18 @@ The power figure is a vectorless estimate (Vivado default toggle rates, confiden
 - Single-sample walkthrough (xsim): `tb/tb_foc_top_single.sv` asserts every stage output and the final `m_axis` beat for one known sample. Result: `PASS: one beat abc=(20000,-10000,-10000) theta=45deg -> duties 18751/46785/39437`. See [Verification evidence](#verification-evidence-one-sample-through-the-loop).
 - Packaged-IP check: the IP was added to a fresh project from this folder as an IP repository and synthesized OOC with 0 errors and 0 warnings. `sin_table.mem` was read successfully; the result was 765 FF, 4 BRAM, 16 DSP.
 
+## Design views (v1)
+
+Exported from the Vivado 2026.1 project made by `scripts/create_project.tcl`, as vector exports (`write_bd_layout`, `write_schematic`) rendered to PNG. All files are in [`design_v1/`](design_v1/).
+
+![FOC Motor Control IP in Vivado IP Integrator](design_v1/01_ip_block_design.png)
+
+| File | View |
+|---|---|
+| [`01_ip_block_design.png`](design_v1/01_ip_block_design.png) | The packaged IP in IP Integrator (block design `foc_ip_bd`): `s_axis`, `aclk`, `aresetn` and the control inputs in, `m_axis` out |
+| [`02_rtl_schematic_foc_top.png`](design_v1/02_rtl_schematic_foc_top.png) | Elaborated RTL of `foc_top`: input slice and credit counter → `u_cpp` (Clarke, Park, PI) → 9-stage theta delay → `u_ipark` → `u_svpwm` → `u_out_fifo`. The image is wide, so zoom in to read the labels. |
+| [`03_rtl_schematic_clarke_park_pi.png`](design_v1/03_rtl_schematic_clarke_park_pi.png) | Inside `u_cpp`: `u_clarke` → `u_park` (theta register) → `u_pi_d`, `u_pi_q` |
+
 ## Using the IP
 
 1. Clone this repo.
@@ -147,7 +159,10 @@ vivado -mode batch -source scripts/run_sim.tcl                              # re
 vivado -mode batch -source scripts/run_sim.tcl -tclargs tb_foc_top_single   # single-sample walkthrough
 vivado -mode batch -source scripts/build.tcl                                # OOC synth + impl + reports
 vivado -mode batch -source scripts/package_ip.tcl                           # re-package the IP
+vivado -mode batch -source scripts/create_project.tcl                       # Vivado project for GUI work
 ```
+
+`scripts/create_project.tcl` generates `build/foc_motor_control/foc_motor_control.xpr`. It contains the IP sources, the timing harness and its constraints, both testbenches, this repo as an IP repository, and a block design `foc_ip_bd` that shows the packaged IP as one block. Open the `.xpr` in Vivado for the RTL schematic (**RTL Analysis → Open Elaborated Design**), the block diagram (**IP Integrator → Open Block Design**), simulation or synthesis runs. It takes an optional part, like `build.tcl`.
 
 `scripts/build.tcl` takes an optional part: `-tclargs <part>`. If you change the vendor, library or version, edit the variables at the top of `scripts/package_ip.tcl`. To regenerate the sine table, run `python scripts/gen_sin_table.py`.
 
@@ -167,8 +182,9 @@ rtl/                   IP sources
   sin_table.mem          quarter-wave sine ROM contents
 tb/                    self-checking testbenches (xsim)
 impl/                  OOC timing harness + constraints used for the results above
-scripts/               build, simulation, packaging and table-generation scripts
+scripts/               build, simulation, packaging, project-creation and table-generation scripts
 reports/               post-route timing, utilization, power, DRC and methodology reports
+design_v1/             v1 design views: IP block design and RTL schematics
 verification_evidence/ single-sample simulation evidence: annotated figure, Vivado waveforms,
                        walkthrough video, XSim transcript and VCD
 ```
